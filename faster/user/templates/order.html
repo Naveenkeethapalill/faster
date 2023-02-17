@@ -1,0 +1,91 @@
+{% extends 'theme.html' %}
+{% load static%}
+{% block content %}
+{%load crispy_forms_filters %}
+
+<div class="container-fluid pt-5">
+    <div class="container">
+        <div class="text-center pb-2">
+            <h6 class="text-primary text-uppercase font-weight-bold">Pricing Plan</h6>
+            <h1 class="mb-4">Affordable Pricing Packages</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-5">
+                <div class="bg-secondary">
+                    <div class="text-center p-4">
+                        <h1 class="display-4 mb-0">
+                            <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">$</small>49<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;">/Mo</small>
+                        </h1>
+                    </div>
+                    <div class="bg-primary text-center p-4">
+                        <h3 class="m-0">Basic</h3>
+                    </div>
+                    <div class="d-flex flex-column align-items-center py-4">
+                        <p>Kochi to Mumbai</p>
+                        <p>Land Transport</p>
+                        <p>UPTO 500KG</p>
+                        <p>Delivery in 3DAYS</p>
+                        <a href="" class="btn btn-primary py-2 px-4 my-2">Order Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="bg-secondary">
+                    <div class="text-center p-4">
+                        <h1 class="display-4 mb-0">
+                            <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">$</small>99<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;">/Mo</small>
+                        </h1>
+                    </div>
+                    <div class="bg-primary text-center p-4">
+                        <h3 class="m-0">Premium</h3>
+                    </div>
+                    <div class="d-flex flex-column align-items-center py-4">
+                        <p>Kochi to Mumbai</p>
+                        <p>Ocean Freight</p>
+                        <p>UPTO 500KG</p>
+                        <p>Delivery in 30DAYS hours</p>
+                        <a href="" class="btn btn-primary py-2 px-4 my-2">Order Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="bg-secondary">
+                    <div class="text-center p-4">
+                        <h1 class="display-4 mb-0">
+                            <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">$</small>149<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;">/Mo</small>
+                        </h1>
+                    </div>
+                    <div class="bg-primary text-center p-4">
+                        <h3 class="m-0">Business</h3>
+                    </div>
+                    <div class="d-flex flex-column align-items-center py-4">
+                        <p>Kochi to Mumbai</p>
+                        <p>Air Freight</p>
+                        <p>UPTO 500KG</p>
+                        <p>Delivery in 20HOURS</p>
+                        <a href="" class="btn btn-primary py-2 px-4 my-2">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pricing Plan End -->
+<div class="col-lg-5" style=" margin-left: 380px;">
+    <div class="bg-primary py-5 px-4 px-sm-5">
+       
+        
+       
+        <div>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form|crispy }}
+              <div>
+                 <button class="btn btn-dark btn-block border-0 py-3" type="submit">Order Now</button>
+              </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
